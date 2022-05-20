@@ -1,0 +1,10 @@
+# Project exclude paths
+/gulimail-common/target/
+/gulimail-coupon/target/
+/gulimail-gateway/target/
+/gulimail-member/target/
+/gulimail-order/target/
+/gulimail-product/target/
+/gulimail-thrid-party/target/
+/gulimail-ware/target/
+/renren-generator/target/

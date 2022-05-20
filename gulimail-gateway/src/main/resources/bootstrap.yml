@@ -1,0 +1,30 @@
+
+server:
+  port: 12000
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: gulimail-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.186.128:8848
+      config:
+        server-addr: 192.168.186.128:8848
+        file-extension: yaml
+    gateway:
+      routes:
+        - id: gulimail-product
+          uri: lb://gulimail-product
+          predicates:
+            - Path=/api/product/**
+          filters:
+            - RewritePath=/api/product/(?<segment>.*),/product/$\{segment}
+        - id: renren-fast
+          uri: lb://renren-fast
+          predicates:
+            - Path=/api/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/renren-fast/$\{segment}

@@ -1,0 +1,26 @@
+
+---
+server:
+  port: 7000
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: gulimail-coupon
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://192.168.186.128:3306/gulimail_sms
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.186.128:8848
+
+
+management:
+  endpoints: #暴露监控的端点
+    web:
+      exposure:
+        include: "*"

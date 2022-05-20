@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: gulimail-coupon
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.186.128:8848
+        file-extension: yaml
+        extension-configs:
+          - {
+              data-id: mybatis.yaml,
+              group: dev,
+              refresh: true
+            }

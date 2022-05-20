@@ -1,0 +1,19 @@
+
+server:
+  port: 13000
+
+spring:
+  application:
+    name: gulimail-thrid-party
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.186.128:8848
+        file-extension: yaml
+        namespace: 942cd5a9-ff82-4014-85c5-7d2694bd121a
+        extension-configs:
+          - {
+              data-id: oss.yaml,
+              group: DEFAULT_GROUP,
+              refresh: true
+          }

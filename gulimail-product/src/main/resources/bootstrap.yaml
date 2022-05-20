@@ -1,0 +1,13 @@
+
+server:
+  port: 10000
+
+spring:
+  application:
+    name: gulimail-product
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.186.128:8848
+        file-extension: yaml
+        namespace: 418f1c0b-8498-40de-8489-984a331323e1
